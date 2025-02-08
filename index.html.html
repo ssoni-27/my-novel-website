@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            margin: 10px 0 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4facfe;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #00c6fb;
+        }
+        .subscribe-container {
+            margin-top: 20px;
+        }
+        .followers {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    <script>
+        let followers = 100;
+        function subscribe() {
+            followers++;
+            document.getElementById("followerCount").innerText = followers;
+        }
+        function redirectToPage() {
+            window.location.href = "newpage.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Landing Page</h1>
+        <p>A simple and clean landing page using HTML & CSS</p>
+        <a href="#" class="btn" onclick="redirectToPage()">Get Started</a>
+        <div class="subscribe-container">
+            <button class="btn" onclick="subscribe()">Subscribe</button>
+            <div class="followers">Followers: <span id="followerCount">100</span></div>
+        </div>
+    </div>
+</body>
+</html>
